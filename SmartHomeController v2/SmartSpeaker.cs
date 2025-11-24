@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+//Class created by Whoever
 namespace SmartHomeController
 {
     public class SmartSpeaker : SmartDevice
@@ -30,5 +31,14 @@ namespace SmartHomeController
             this.Volume = speakerVolume;
 
         }
+
+        public override void GetStatus()
+        {
+            base.GetStatus();
+            Console.WriteLine("This is a Smart Speaker");
+            Console.WriteLine($"Volume: {Volume}, Playing Status: {(IsPlaying ? "Playing" : "Not Playing")}");
+        }
     }
-}
+
+    }
+
